@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dettagli Pizza</title>
+    <link rel="stylesheet"
+          th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mt-5 mb-4 text-center">Dettagli pizza</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card">
+                    <img class="card-img-top" th:src="${pizza.imgURL}" alt="Immagine pizza">
+                    <div class="card-body">
+                        <h2 class="card-title" th:text="${pizza.name}"></h2>
+                        <p class="card-text" th:text="${pizza.description}"></p>
+                        <p class="card-text" th:text="'Prezzo: ' + ${pizza.price} + ' €'"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div th:replace="fragments :: back"></div>
+    </div>
+</body>
+</html>
