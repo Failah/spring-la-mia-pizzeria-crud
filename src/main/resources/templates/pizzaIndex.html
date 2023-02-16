@@ -10,7 +10,8 @@
 	<div class="container mt-5">
 		<h1 class="mt-5 mb-4 text-center">La mia pizzeria!</h1>
 
-		<form class="mb-3 row justify-content-center" th:action="@{/pizzas}" method="get">
+		<form class="mb-3 row justify-content-center" th:action="@{/pizzas}"
+			method="get">
 			<div class="form-group col-4">
 				<input type="text" class="form-control" id="title" name="title"
 					placeholder="Cerca per titolo">
@@ -46,6 +47,9 @@
 					<p>Non ci sono pizze al momento!.</p>
 				</div>
 			</div>
+		</div>
+		<div th:fragment="back" class="mt-5 text-center">
+			<a th:href="@{/pizzas/new-pizza}" class="btn btn-primary btn-block">Crea una Pizza</a>
 		</div>
 	</div>
 </body>
