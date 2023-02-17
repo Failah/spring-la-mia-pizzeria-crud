@@ -6,9 +6,9 @@
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}" /><link rel="stylesheet"
 	th:href="@{/css/main.css}" />
 </head>
-<body>
-    <div class="container mt-5">
-        <h1 class="mt-5 mb-4 text-center">Modifica Pizza</h1>
+<body class="vs-bg-custom vs-fixed-height-100 text-white">
+    <div class="container my-5 py-5">
+        <h1 class="mt-5 mb-4 text-center vs-form-padding">Modifica Pizza</h1>
         <form th:action="@{/pizzas/edit/{id}(id=${pizza.id})}" th:object="${pizza}" method="post">
             <ul>
                 <li th:each="err : ${#fields.allErrors()}" th:text="${err}" class="text-danger"></li>

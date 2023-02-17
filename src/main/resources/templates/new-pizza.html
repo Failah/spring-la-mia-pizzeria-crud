@@ -8,9 +8,9 @@
 	<link rel="stylesheet"
 	th:href="@{/css/main.css}" />
 </head>
-<body>
-	<div class="container mt-5">
-		<h1 class="mt-5 mb-4 text-center">Aggiungi una nuova pizza</h1>
+<body class="vs-bg-custom vs-fixed-height-100 text-white">
+	<div class="container my-5 py-5">
+		<h1 class="mt-5 mb-4 text-center vs-form-padding">Aggiungi una nuova pizza</h1>
 		<form th:action="@{/pizzas/new-pizza}" th:object="${pizza}"
 			method="post">
 			<ul>
