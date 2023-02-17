@@ -14,7 +14,7 @@
 }
 
 .vs-fixed-height-80 {
-	height: 86vh;
+	height: 88vh;
 }
 
 .vs-fixed-height-60 {
@@ -24,4 +24,19 @@
 
 .vs-overflow {
 	overflow-y: auto;
+}
+
+.vs-border {
+	border: 5px solid black;
+	border-radius: 24px;
+}
+
+.vs-card-border {
+	border-top-left-radius: 18px;
+	border-top-right-radius: 18px;
+	max-height: 428px;
+}
+
+.vs-index-img-maxH {
+	max-height: 83px;
 }

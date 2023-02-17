@@ -5,14 +5,16 @@
 <title>Dettagli Pizza</title>
 <link rel="stylesheet"
 	th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}" />
+	<link rel="stylesheet"
+	th:href="@{/css/main.css}" />
 </head>
-<body>
+<body class="vs-bg-custom vs-fixed-height-100">
 	<div class="container mt-5">
-		<h1 class="mt-5 mb-4 text-center">Dettagli pizza</h1>
+		<h1 class="mt-5 mb-4 text-center text-white">Dettagli pizza</h1>
 		<div class="row justify-content-center">
 			<div class="col-lg-6">
-				<div class="card">
-					<img class="card-img-top" th:src="${pizza.imgURL}"
+				<div class="card vs-border">
+					<img class="img-fluid vs-card-border" th:src="${pizza.imgURL}"
 						alt="Immagine pizza">
 					<div class="card-body">
 						<h2 class="card-title" th:text="${pizza.name}"></h2>
