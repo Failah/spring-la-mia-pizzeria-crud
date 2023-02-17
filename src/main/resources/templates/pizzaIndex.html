@@ -8,8 +8,8 @@
 	<link rel="stylesheet"
 	th:href="@{/css/main.css}" />
 </head>
-<body class="vs-bg-bisque">
-	<div class="container mt-5 bg-light p-4 border rounded-5">
+<body class="vs-bg-custom vs-fixed-height-100">
+	<div class="container mt-5 bg-light p-4 border rounded-5 vs-fixed-height-80">
 		<h1 class="mt-2 mb-4 text-center">La mia pizzeria!</h1>
 
 		<form class="mb-3 row justify-content-center" th:action="@{/pizzas}"
@@ -21,7 +21,7 @@
 			<button type="submit" class="btn btn-primary col-4 w-25">Cerca</button>
 		</form>
 
-		<div class="row">
+		<div class="row vs-fixed-height-60">
 			<div class="col-md-12">
 				<table class="table table-striped"
 					th:if="${not #lists.isEmpty(pizzas)}">

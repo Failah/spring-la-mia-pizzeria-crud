@@ -1,3 +1,27 @@
 .vs-bg-bisque {
 	background-color: bisque;
 }
+
+.vs-bg-custom {
+	background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-gourmet-food-pizza-background-template-image_160185.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.vs-fixed-height-100 {
+	height: 100vh;
+	overflow: hidden
+}
+
+.vs-fixed-height-80 {
+	height: 86vh;
+}
+
+.vs-fixed-height-60 {
+	height: 60vh;
+	overflow: auto;
+}
+
+.vs-overflow {
+	overflow-y: auto;
+}
