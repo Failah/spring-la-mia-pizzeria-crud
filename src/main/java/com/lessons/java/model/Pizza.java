@@ -20,7 +20,7 @@ public class Pizza {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@NotEmpty(message = "Questo campo è obbligatorio (NotEmpty)")
+	@NotEmpty(message = "Il nome è obbligatorio")
 	@Size(min = 1, max = 50, message = "Il nome non deve contenere più di {max} caratteri")
 	private String name;
 
@@ -29,7 +29,7 @@ public class Pizza {
 	@Column(name = "image")
 	private String imgURL;
 
-	@NotNull
+	@NotNull(message = "Il prezzo non può essere vuoto")
 	@DecimalMin(value = "0.01", message = "Il prezzo deve essere maggiore di zero")
 	private BigDecimal price;
 
@@ -43,6 +43,10 @@ public class Pizza {
 
 	public String getDescription() {
 		return description;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public void setDescription(String description) {

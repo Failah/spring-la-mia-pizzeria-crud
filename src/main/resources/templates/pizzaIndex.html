@@ -39,7 +39,7 @@
 							<td th:text="${pizza.description}"></td>
 							<td th:text="${pizza.price} + ' €'"></td>
 							<td><a th:href="@{/pizzas/{id}(id=${pizza.id})}"
-								class="btn btn-primary">Dettagli</a></td>
+								class="btn btn-info">Dettagli</a></td>
 						</tr>
 					</tbody>
 				</table>
@@ -52,5 +52,7 @@
 			<a th:href="@{/pizzas/new-pizza}" class="btn btn-primary btn-block">Crea una Pizza</a>
 		</div>
 	</div>
+	<script th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
+	
 </body>
 </html>

@@ -71,13 +71,35 @@ public class IndexController {
 	}
 
 	@PostMapping("/pizzas/new-pizza")
-	public String store(@Valid @ModelAttribute("pizza") Pizza pizza, BindingResult bindingResult, Model model) {
-		System.out.println(pizza.toString());
+	public String store(@Valid @ModelAttribute("pizza") Pizza pizzaForm, BindingResult bindingResult, Model model) {
+		System.out.println(pizzaForm.toString());
 		System.out.println(bindingResult.toString());
 		if (bindingResult.hasErrors()) {
-			return "/pizzas/new-pizza";
+			return "new-pizza";
 		}
-		pizzaRepository.save(pizza);
+		pizzaRepository.save(pizzaForm);
+		return "redirect:/pizzas";
+	}
+
+	@GetMapping("/pizzas/edit/{id}")
+	public String edit(@PathVariable("id") Integer id, Model model) {
+		Pizza pizza = pizzaRepository.getReferenceById(id);
+		model.addAttribute("pizza", pizza);
+		return "edit-pizza";
+	}
+
+	@PostMapping("/pizzas/edit/{id}")
+	public String update(@Valid @ModelAttribute("pizza") Pizza pizzaForm, BindingResult bindingResult, Model model) {
+		if (bindingResult.hasErrors()) {
+			return "edit-pizza";
+		}
+		pizzaRepository.save(pizzaForm);
+		return "redirect:/pizzas";
+	}
+
+	@PostMapping("pizzas/delete/{id}")
+	public String delete(@PathVariable("id") Integer id) {
+		pizzaRepository.deleteById(id);
 		return "redirect:/pizzas";
 	}
 
